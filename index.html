@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAPITANEUS MUTABILIS - MANIFEST SĂN VÉ THÀNH CÔNG</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,700&display=swap" rel="stylesheet">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <style>
+    :root {
+      --gold-yellow: #f5d000;
+      --c-winter: #64b5f6;
+      --c-autumn: #ffd54f;
+      --c-summer: #4dd0e1;
+      --c-spring: #ff4081;
+      --active-tier-color: var(--c-winter);
+      --active-glow: rgba(100, 181, 246, 0.45);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--gold-yellow);
+      background-image: 
+        radial-gradient(circle at 50% 10%, rgba(255, 90, 0, 0.55) 0%, rgba(245, 208, 0, 0.15) 50%, transparent 80%),
+        radial-gradient(rgba(0, 0, 0, 0.18) 1.5px, transparent 1.5px);
+      background-size: 100% 100%, 14px 14px;
+      font-family: 'Montserrat', sans-serif;
+      color: #0b0b0d;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 16px 12px 70px;
+    }
+
+    #inAppWarning {
+      display: none;
+      width: 100%;
+      max-width: 600px;
+      background: #000;
+      color: #f5d000;
+      border: 1px solid #f5d000;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    .header-logo { text-align: center; margin-bottom: 20px; }
+
+    .main-title {
+      font-size: clamp(2rem, 5.5vw, 3.6rem);
+      font-weight: 900;
+      color: #0b0b0e;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      line-height: 1.02;
+      text-shadow: 2px 2px 0px #fff, 5px 5px 0px rgba(0,0,0,0.25);
+    }
+
+    .sub-title {
+      font-size: 0.8rem;
+      font-weight: 900;
+      letter-spacing: 5px;
+      color: #fff;
+      background: #0b0b0e;
+      display: inline-block;
+      padding: 6px 20px;
+      margin-top: 8px;
+      text-transform: uppercase;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      align-items: flex-start;
+    }
+
+    .form-box {
+      flex: 1;
+      min-width: 320px;
+      max-width: 400px;
+      background: linear-gradient(160deg, #16161b 0%, #0c0c0f 100%);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      padding: 24px 20px;
+      color: #fff;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.65);
+    }
+
+    .form-box-header {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 12px;
+      margin-bottom: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .form-box h3 {
+      font-size: 1rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .form-box .sys-code {
+      font-family: monospace;
+      font-size: 0.65rem;
+      color: var(--gold-yellow);
+      letter-spacing: 1.5px;
+    }
+
+    .form-group { margin-bottom: 16px; }
+
+    label {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #8c8c99;
+      margin-bottom: 6px;
+      letter-spacing: 1px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 11px 13px;
+      background: #060608;
+      border: 1px solid #282832;
+      border-radius: 8px;
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.88rem;
+      outline: none;
+      transition: all 0.25s ease;
+    }
+
+    input:focus, textarea:focus {
+      border-color: var(--gold-yellow);
+      box-shadow: 0 0 14px rgba(245, 208, 0, 0.25);
+    }
+
+    .file-upload-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .file-btn {
+      background: linear-gradient(180deg, #2a2a35 0%, #1a1a22 100%);
+      padding: 9px 14px;
+      border-radius: 8px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: 1px solid rgba(255,255,255,0.15);
+      color: #e0e0e0;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .file-btn:hover {
+      background: #343442;
+      color: #fff;
+      border-color: var(--gold-yellow);
+    }
+    .file-name-text {
+      font-size: 0.72rem;
+      color: #71717f;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .tier-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .tier-btn input[type="radio"] { position: absolute; opacity: 0; }
+
+    .tier-label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 6px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+      border: 1px solid #282834;
+      background: #09090c;
+      color: #777;
+      transition: all 0.25s;
+    }
+
+    .tier-winter input:checked + .tier-label { border-color: var(--c-winter); color: var(--c-winter); background: rgba(100, 181, 246, 0.12); box-shadow: 0 0 16px rgba(100, 181, 246, 0.25); }
+    .tier-autumn input:checked + .tier-label { border-color: var(--c-autumn); color: var(--c-autumn); background: rgba(255, 213, 79, 0.12); box-shadow: 0 0 16px rgba(255, 213, 79, 0.25); }
+    .tier-summer input:checked + .tier-label { border-color: var(--c-summer); color: var(--c-summer); background: rgba(77, 208, 225, 0.12); box-shadow: 0 0 16px rgba(77, 208, 225, 0.25); }
+    .tier-spring input:checked + .tier-label { border-color: var(--c-spring); color: var(--c-spring); background: rgba(255, 64, 129, 0.12); box-shadow: 0 0 16px rgba(255, 64, 129, 0.25); }
+
+    .preview-area {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 340px;
+    }
+
+    .interactive-note {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #0b0b0e;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      background: rgba(255,255,255,0.45);
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    .card-3d-scene {
+      width: 340px;
+      height: 604px;
+      perspective: 1200px;
+      cursor: pointer;
+    }
+
+    .card-3d-object {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .card-3d-object.flipped {
+      transform: rotateY(180deg);
+    }
+
+    .pass-card {
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      position: absolute;
+      top: 0; left: 0;
+      overflow: hidden;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.75),
+        0 0 0 1px rgba(255, 255, 255, 0.15),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+    }
+
+    #front-pass {
+      background: #070709;
+      display: flex;
+      flex-direction: column;
+      transform: rotateY(0deg);
+      z-index: 2;
+    }
+
+    #front-pass::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #ff007f, #f5d000, #00f2fe, #4facfe, #ff007f);
+      z-index: 10;
+    }
+
+    .ticket-orb {
+      position: absolute;
+      top: -45px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 340px;
+      height: 340px;
+      background: radial-gradient(circle, rgba(255, 120, 0, 0.95) 0%, rgba(255, 60, 0, 0.35) 45%, transparent 70%);
+      border-radius: 50%;
+      filter: blur(28px);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .ticket-watermark {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-90deg);
+      font-size: 5.2rem;
+      font-weight: 900;
+      color: rgba(255, 255, 255, 0.02);
+      letter-spacing: 12px;
+      white-space: nowrap;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .ticket-inner {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      padding: 22px 20px 20px;
+      display: flex;
+      flex-direction: column;
+      color: #fff;
+    }
+
+    .lanyard-slot {
+      width: 44px;
+      height: 7px;
+      background: #030304;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 10px;
+      margin: 0 auto 10px;
+    }
+
+    .ticket-top { 
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .tour-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+      font-family: monospace;
+      font-size: 0.62rem;
+      color: #b0b0b8;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .tour-meta .live-indicator {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      color: var(--gold-yellow);
+      font-weight: 700;
+    }
+
+    .tour-meta .live-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--gold-yellow);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--gold-yellow);
+    }
+
+    .ticket-title-main {
+      font-size: 1.45rem;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      line-height: 1.05;
+      background: linear-gradient(180deg, #ffffff 0%, #d8d8df 45%, #888894 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .status-badge-card {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px 16px;
+      border-radius: 4px;
+      background: rgba(0, 0, 0, 0.7);
+      border: 1px solid rgba(245, 208, 0, 0.6);
+      font-size: 0.7rem;
+      font-weight: 800;
+      color: var(--gold-yellow);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      box-shadow: 0 0 15px rgba(245, 208, 0, 0.2);
+    }
+
+    .ticket-body {
+      margin: auto 0;
+      background: rgba(14, 14, 18, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 14px;
+      padding: 16px 14px;
+    }
+
+    .fan-profile-row {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .avatar-wrapper {
+      width: 76px;
+      height: 76px;
+      border-radius: 12px;
+      border: 1.5px solid rgba(255, 255, 255, 0.25);
+      background: #111116;
+      overflow: hidden;
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    .avatar-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .avatar-wrapper .avatar-chip {
+      position: absolute;
+      bottom: 2px;
+      right: 2px;
+      width: 14px;
+      height: 10px;
+      background: linear-gradient(135deg, #ffd700, #b8860b);
+      border-radius: 2px;
+      opacity: 0.85;
+    }
+
+    .fan-meta-col { flex: 1; overflow: hidden; }
+
+    .field-caption {
+      font-family: monospace;
+      font-size: 0.58rem;
+      color: #7b7b8a;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .fan-nickname-display {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #fff;
+      text-transform: uppercase;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin: 2px 0 6px;
+      min-height: 28px;
+    }
+
+    .tier-badge-card {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #050507;
+      background: var(--active-tier-color);
+      box-shadow: 0 0 14px var(--active-glow);
+    }
+
+    .message-container {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: none;
+    }
+
+    .message-text {
+      font-size: 0.75rem;
+      line-height: 1.35;
+      font-style: italic;
+      color: #d1d1db;
+      background: rgba(0, 0, 0, 0.35);
+      padding: 8px 10px;
+      border-left: 2px solid var(--gold-yellow);
+      border-radius: 4px;
+      max-height: 52px;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+
+    .ticket-bottom {
+      border-top: 1px dashed rgba(255, 255, 255, 0.18);
+      padding-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .venue-block .venue-date {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--gold-yellow);
+      letter-spacing: 1px;
+    }
+
+    .venue-block .venue-title {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: #eaeaf0;
+      margin-top: 1px;
+    }
+
+    .venue-block .venue-sub {
+      font-family: monospace;
+      font-size: 0.55rem;
+      color: #7b7b8a;
+      letter-spacing: 0.5px;
+    }
+
+    .security-block { text-align: right; }
+
+    .barcode-bars {
+      display: flex;
+      gap: 2px;
+      height: 22px;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+    .barcode-line { width: 2px; background: #fff; height: 100%; opacity: 0.85; }
+    
+    .serial-tag {
+      font-family: monospace;
+      font-size: 0.58rem;
+      color: #8c8c99;
+      letter-spacing: 1px;
+      margin-top: 3px;
+    }
+
+    #back-pass {
+      background: #000;
+      transform: rotateY(180deg);
+      z-index: 1;
+    }
+
+    #back-pass .poster-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    #back-pass .back-lanyard {
+      position: absolute;
+      top: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 44px;
+      height: 7px;
+      background: #000;
+      border: 1px solid rgba(255,255,255,0.4);
+      border-radius: 10px;
+      z-index: 5;
+    }
+
+    .btn-actions-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      margin-top: 25px;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .btn-video-export {
+      width: 100%;
+      background: linear-gradient(135deg, #0b0b0e 0%, #1f1f2a 100%);
+      color: var(--gold-yellow);
+      border: 2px solid var(--gold-yellow);
+      padding: 16px 20px;
+      border-radius: 50px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 0.95rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      box-shadow: 0 0 25px rgba(245, 208, 0, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .btn-video-export:hover {
+      background: var(--gold-yellow);
+      color: #000;
+      transform: translateY(-2px);
+      box-shadow: 0 0 35px rgba(245, 208, 0, 0.6);
+    }
+
+    .btn-video-export:disabled {
+      opacity: 0.8;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .image-sub-actions {
+      display: flex;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .btn-export-sub {
+      flex: 1;
+      background: #000;
+      color: #ccc;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 11px 14px;
+      border-radius: 30px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-export-sub:hover {
+      border-color: #fff;
+      color: #fff;
+      background: #181820;
+    }
+
+    #renderCanvas { display: none; }
+
+    @media (max-width: 800px) {
+      .container { flex-direction: column; align-items: center; }
+      .form-box, .card-3d-scene { width: 100%; max-width: 340px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CẢNH BÁO TRÌNH DUYỆT ẨN -->
+  <div id="inAppWarning">
+    ⚠️ BẠN ĐANG MỞ TRONG TRÌNH DUYỆT ẨN (FACEBOOK / ZALO / TIKTOK).<br>
+    HÃY BẤM DẤU (⋮) HOẶC (⋯) Ở GÓC TRÊN RỒI CHỌN <b>"MỞ BẰNG TRÌNH DUYỆT NGOÀI" (SAFARI / CHROME)</b> ĐỂ TẢI VIDEO XUỐNG NHÉ!
+  </div>
+
+  <div class="header-logo">
+    <h1 class="main-title">CAPITANEUS<br>MUTABILIS</h1>
+    <div class="sub-title">MANIFEST SĂN VÉ THÀNH CÔNG</div>
+  </div>
+
+  <div class="container">
+    
+    <!-- KHỐI NHẬP LIỆU -->
+    <div class="form-box">
+      <div class="form-box-header">
+        <h3>THÔNG TIN MANIFEST</h3>
+        <span class="sys-code">CUUCOCANH</span>
+      </div>
+
+      <div class="form-group">
+        <label>NAME / BIỆT DANH</label>
+        <input type="text" id="inputNickname" placeholder="Nhập name của bạn...">
+      </div>
+
+      <div class="form-group">
+        <label>ẢNH AVATAR MẶT TRƯỚC</label>
+        <div class="file-upload-wrap">
+          <label class="file-btn" for="avatarInput">CHỌN ẢNH</label>
+          <input type="file" id="avatarInput" accept="image/*" style="display:none;" onchange="handleAvatar(event)">
+          <span class="file-name-text" id="fileName">Chưa chọn ảnh</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>HẠNG VÉ MỤC TIÊU</label>
+        <div class="tier-options">
+          <label class="tier-btn tier-winter">
+            <input type="radio" name="tier" value="WINTER" checked>
+            <span class="tier-label">WINTER</span>
+          </label>
+          <label class="tier-btn tier-autumn">
+            <input type="radio" name="tier" value="AUTUMN">
+            <span class="tier-label">AUTUMN</span>
+          </label>
+          <label class="tier-btn tier-summer">
+            <input type="radio" name="tier" value="SUMMER">
+            <span class="tier-label">SUMMER</span>
+          </label>
+          <label class="tier-btn tier-spring">
+            <input type="radio" name="tier" value="SPRING">
+            <span class="tier-label">SPRING</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>LỜI NHẮN ĐẾN CAPTAIN BOY</label>
+        <textarea id="inputMessage" rows="2" placeholder="Nhập lời nhắn gửi gắm..."></textarea>
+      </div>
+    </div>
+
+    <!-- KHU VỰC THẺ 3D INTERACTIVE -->
+    <div class="preview-area">
+      <div class="interactive-note">CHẠM VÀO THẺ ĐỂ LẬT XEM MẶT SAU</div>
+
+      <div class="card-3d-scene" onclick="toggleFlip()">
+        <div class="card-3d-object" id="cardFlipper">
+          
+          <!-- MẶT TRƯỚC -->
+          <div class="pass-card" id="front-pass">
+            <div class="ticket-orb"></div>
+            <div class="ticket-watermark">MUTABILIS</div>
+
+            <div class="ticket-inner">
+              <div class="ticket-top">
+                <div class="lanyard-slot"></div>
+                <div class="tour-meta">
+                  <span>CAPTAIN BOY - FAN MEETING 2026</span>
+                  <span class="live-indicator"><span class="live-dot"></span> PRIORITY</span>
+                </div>
+                <div class="ticket-title-main">CAPITANEUS<br>MUTABILIS</div>
+                <div class="status-badge-card">SẴN SÀNG GIẬT VÉ</div>
+              </div>
+
+              <div class="ticket-body">
+                <div class="fan-profile-row">
+                  <div class="avatar-wrapper">
+                    <img id="cardAvatar" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='%2322222a'><rect width='100' height='100' fill='%23121218'/><circle cx='50' cy='38' r='18' fill='%23555566'/><path d='M22 84 C22 64, 34 58, 50 58 C66 58, 78 64, 78 84 Z' fill='%23555566'/></svg>" alt="Passenger">
+                    <div class="avatar-chip"></div>
+                  </div>
+                  
+                  <div class="fan-meta-col">
+                    <div class="field-caption">PASSENGER NAME</div>
+                    <div class="fan-nickname-display" id="cardNickname"></div>
+                    <div class="field-caption" style="margin-top:4px;">TARGET MNF</div>
+                    <span class="tier-badge-card" id="cardTierBadge">WINTER </span>
+                  </div>
+                </div>
+
+                <div class="message-container" id="messageContainer">
+                  <div class="field-caption" style="margin-bottom: 4px;">TRANSMISSION MESSAGE</div>
+                  <div class="message-text" id="cardMessage"></div>
+                </div>
+              </div>
+
+              <div class="ticket-bottom">
+                <div class="venue-block">
+                  <div class="venue-date">22.11.2026</div>
+                  <div class="venue-title">SÂN KHẤU C30, TP.HCM</div>
+                  <div class="venue-sub">141 BẮC HẢI, DIÊN HỒNG</div>
+                </div>
+
+                <div class="security-block">
+                  <div class="barcode-bars">
+                    <div class="barcode-line" style="height: 100%;"></div>
+                    <div class="barcode-line" style="width: 3px; height: 100%;"></div>
+                    <div class="barcode-line" style="height: 60%;"></div>
+                    <div class="barcode-line" style="width: 4px; height: 90%;"></div>
+                    <div class="barcode-line" style="height: 40%;"></div>
+                    <div class="barcode-line" style="width: 2px; height: 100%;"></div>
+                    <div class="barcode-line" style="height: 75%;"></div>
+                    <div class="barcode-line" style="width: 3px; height: 100%;"></div>
+                  </div>
+                  <div class="serial-tag" id="cardSerial">MNF-2026-VIP</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- MẶT SAU -->
+          <div class="pass-card" id="back-pass">
+            <div class="back-lanyard"></div>
+            <img class="poster-img" id="cardPoster" src="poster.jpg" alt="Poster Captain Boy">
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CÁC NÚT XUẤT VIDEO & ẢNH -->
+      <div class="btn-actions-wrap">
+        <button class="btn-video-export" id="btnVideo" onclick="exportSpinningVideo()">
+          XUẤT VIDEO XOAY 3D (10S CÓ NHẠC)
+        </button>
+
+        <div class="image-sub-actions">
+          <button class="btn-export-sub" onclick="downloadSingle('front-pass', 'MAT_TRUOC')">
+            LƯU ẢNH TRƯỚC
+          </button>
+          <button class="btn-export-sub" onclick="downloadSingle('back-pass', 'MAT_SAU')">
+            LƯU ẢNH SAU
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <canvas id="renderCanvas" width="720" height="1280"></canvas>
+
+  <script>
+    const ua = navigator.userAgent || navigator.vendor || window.opera;
+    const isInApp = /FBAN|FBAV|Instagram|Zalo|Line|Messenger|musical_ly|ByteLocale/i.test(ua);
+    if (isInApp) {
+      document.getElementById('inAppWarning').style.display = 'block';
+    }
+
+    const tierConfigMap = {
+      WINTER: { color: 'var(--c-winter)', glow: 'rgba(100, 181, 246, 0.45)', text: 'WINTER TIER' },
+      AUTUMN: { color: 'var(--c-autumn)', glow: 'rgba(255, 213, 79, 0.45)', text: 'AUTUMN TIER' },
+      SUMMER: { color: 'var(--c-summer)', glow: 'rgba(77, 208, 225, 0.45)', text: 'SUMMER TIER' },
+      SPRING: { color: 'var(--c-spring)', glow: 'rgba(255, 64, 129, 0.45)', text: 'SPRING TIER' }
+    };
+
+    let generatedVideoBlob = null;
+    let generatedVideoUrl = null;
+    let generatedFileName = '';
+    let generatedMimeType = 'video/mp4';
+
+    function toggleFlip() {
+      document.getElementById('cardFlipper').classList.toggle('flipped');
+    }
+
+    function handleAvatar(event) {
+      const file = event.target.files[0];
+      if (file) {
+        document.getElementById('fileName').innerText = file.name;
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          document.getElementById('cardAvatar').src = e.target.result;
+        }
+        reader.readAsDataURL(file);
+      }
+    }
+
+    function updatePreview() {
+      const nick = document.getElementById('inputNickname').value.trim();
+      const msg = document.getElementById('inputMessage').value.trim();
+      const selectedTier = document.querySelector('input[name="tier"]:checked').value;
+
+      document.getElementById('cardNickname').innerText = nick;
+
+      const msgContainer = document.getElementById('messageContainer');
+      const msgElement = document.getElementById('cardMessage');
+      if (msg) {
+        msgContainer.style.display = 'block';
+        msgElement.innerText = `"${msg}"`;
+      } else {
+        msgContainer.style.display = 'none';
+        msgElement.innerText = '';
+      }
+
+      const tierData = tierConfigMap[selectedTier];
+      const badge = document.getElementById('cardTierBadge');
+      badge.style.background = tierData.color;
+      badge.style.boxShadow = `0 0 14px ${tierData.glow}`;
+      badge.innerText = tierData.text;
+
+      const randDigits = Math.floor(1000 + Math.random() * 9000);
+      document.getElementById('cardSerial').innerText = `MNF-26-${selectedTier.substring(0,2)}-${randDigits}`;
+    }
+
+    document.getElementById('inputNickname').addEventListener('input', updatePreview);
+    document.getElementById('inputMessage').addEventListener('input', updatePreview);
+    document.querySelectorAll('input[name="tier"]').forEach(r => r.addEventListener('change', updatePreview));
+
+    function downloadSingle(elementId, suffix) {
+      const el = document.getElementById(elementId);
+      const nickname = document.getElementById('inputNickname').value.trim() || 'MANIFET';
+      const originalRadius = el.style.borderRadius;
+      el.style.borderRadius = '0px';
+
+      html2canvas(el, { scale: 3, backgroundColor: null, useCORS: true }).then(canvas => {
+        el.style.borderRadius = originalRadius;
+        const link = document.createElement('a');
+        link.download = `VIP_PASS_${suffix}_${nickname.toUpperCase().replace(/\s+/g, '_')}.png`;
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+      });
+    }
+
+    // ========================================================
+    // TỰ ĐỘNG LƯU / TẢI VIDEO THẲNG VÀO THIẾT BỊ
+    // ========================================================
+    async function directSaveVideo() {
+      if (!generatedVideoBlob) return;
+      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      
+      const file = new File([generatedVideoBlob], generatedFileName, { 
+        type: generatedMimeType, 
+        lastModified: Date.now() 
+      });
+
+      if (navigator.canShare && navigator.canShare({ files: [file] })) {
+        try {
+          await navigator.share({
+            files: [file],
+            title: 'VIP PASS 3D CAPTAIN BOY'
+          });
+          return;
+        } catch (e) {
+          if (e.name === 'AbortError') return;
+        }
+      }
+
+      const a = document.createElement('a');
+      a.href = generatedVideoUrl;
+      a.download = generatedFileName;
+      a.target = '_blank';
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(() => document.body.removeChild(a), 300);
+
+      if (isIOS) {
+        window.open(generatedVideoUrl, '_blank');
+      }
+    }
+
+    // ========================================================
+    // QUAY VIDEO 3D CÓ NHẠC NỀN CHUẨN ĐÚNG 10 GIÂY
+    // ========================================================
+    async function exportSpinningVideo() {
+      const btn = document.getElementById('btnVideo');
+      btn.disabled = true;
+      btn.innerText = 'ĐANG TẢI NHẠC & XỬ LÝ ẢNH...';
+
+      const nickname = document.getElementById('inputNickname').value.trim() || 'MANIFET';
+      const frontEl = document.getElementById('front-pass');
+      const backEl = document.getElementById('back-pass');
+
+      const flipper = document.getElementById('cardFlipper');
+      flipper.classList.remove('flipped');
+
+      let audioCtx = null;
+      let audioSourceNode = null;
+
+      try {
+        // 1. Tải & giải mã sẵn file nhạc musicmnf.mp3 vào bộ nhớ
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        if (audioCtx.state === 'suspended') {
+          await audioCtx.resume();
+        }
+
+        let audioTrack = null;
+        try {
+          const res = await fetch('musicmnf.mp3');
+          if (res.ok) {
+            const arrayBuf = await res.arrayBuffer();
+            const decodedBuffer = await audioCtx.decodeAudioData(arrayBuf);
+            
+            const audioDest = audioCtx.createMediaStreamDestination();
+            audioSourceNode = audioCtx.createBufferSource();
+            audioSourceNode.buffer = decodedBuffer;
+            audioSourceNode.loop = true; // Lặp lại nếu bài hát ngắn hơn 10s
+            audioSourceNode.connect(audioDest);
+            
+            audioTrack = audioDest.stream.getAudioTracks()[0];
+          }
+        } catch (audioErr) {
+          console.warn("Không nạp được file musicmnf.mp3, vẫn tiếp tục quay video:", audioErr);
+        }
+
+        // 2. Chụp ảnh 2 mặt thẻ
+        const canvasFront = await html2canvas(frontEl, { scale: 2, backgroundColor: null, useCORS: true });
+        const canvasBack = await html2canvas(backEl, { scale: 2, backgroundColor: null, useCORS: true });
+
+        const imgFront = new Image();
+        imgFront.src = canvasFront.toDataURL('image/png');
+        await new Promise(r => imgFront.onload = r);
+
+        const imgBack = new Image();
+        imgBack.src = canvasBack.toDataURL('image/png');
+        await new Promise(r => imgBack.onload = r);
+
+        const canvas = document.getElementById('renderCanvas');
+        const ctx = canvas.getContext('2d');
+        const W = 720, H = 1280;
+        const cardW = 440;
+        const cardH = 780;
+        const cx = W / 2;
+        const cy = H / 2;
+
+        const videoStream = canvas.captureStream(30);
+
+        // 3. Ghép luồng Video + Luồng Nhạc vào MediaStream
+        const combinedTracks = [...videoStream.getVideoTracks()];
+        if (audioTrack) {
+          combinedTracks.push(audioTrack);
+        }
+        const recordStream = new MediaStream(combinedTracks);
+
+        const possibleMimes = [
+          'video/mp4;codecs=avc1,mp4a.40.2',
+          'video/mp4',
+          'video/webm;codecs=vp9,opus',
+          'video/webm;codecs=vp8,opus',
+          'video/webm'
+        ];
+        let chosenMime = '';
+        for (const t of possibleMimes) {
+          if (typeof MediaRecorder !== 'undefined' && MediaRecorder.isTypeSupported && MediaRecorder.isTypeSupported(t)) {
+            chosenMime = t;
+            break;
+          }
+        }
+
+        const isMp4 = chosenMime.includes('mp4') || (!chosenMime.includes('webm') && /iPhone|iPad|iPod/.test(navigator.userAgent));
+        generatedMimeType = isMp4 ? 'video/mp4' : 'video/webm';
+        const ext = isMp4 ? 'mp4' : 'webm';
+
+        const recorder = new MediaRecorder(recordStream, { 
+          mimeType: chosenMime || undefined, 
+          videoBitsPerSecond: 4500000 
+        });
+
+        const chunks = [];
+        recorder.ondataavailable = e => {
+          if (e.data && e.data.size > 0) chunks.push(e.data);
+        };
+        
+        recorder.onstop = async () => {
+          if (audioSourceNode) {
+            try { audioSourceNode.stop(); } catch(e){}
+          }
+          if (audioCtx && audioCtx.state !== 'closed') {
+            audioCtx.close();
+          }
+
+          generatedVideoBlob = new Blob(chunks, { type: generatedMimeType });
+          generatedVideoUrl = URL.createObjectURL(generatedVideoBlob);
+          generatedFileName = `VIDEO_PASS_3D_${nickname.toUpperCase().replace(/\s+/g, '_')}.${ext}`;
+
+          btn.disabled = false;
+          btn.innerText = 'TẢI / LƯU LẠI VIDEO';
+          btn.onclick = directSaveVideo;
+
+          await directSaveVideo();
+        };
+
+        // Bắt đầu phát luồng nhạc và khởi động bộ ghi
+        if (audioSourceNode) {
+          audioSourceNode.start(0);
+        }
+        recorder.start();
+
+        // 4. CHUẨN 10 GIÂY (10000MS) - THẺ XOAY TỪ TỐN VÀ MƯỢT
+        const duration = 10000;
+        let startTime = null;
+
+        function renderFrame(timestamp) {
+          if (!startTime) startTime = timestamp;
+          const elapsed = timestamp - startTime;
+
+          const secLeft = Math.max(0, Math.ceil((duration - elapsed) / 1000));
+          btn.innerText = `ĐANG TẠO VIDEO CÓ NHẠC... (${secLeft}S)`;
+
+          if (elapsed >= duration) {
+            if (recorder.state === 'recording') {
+              recorder.stop();
+            }
+            return;
+          }
+
+          const progress = Math.min(elapsed / duration, 1);
+          const angle = progress * (Math.PI * 2);
+          const cos = Math.cos(angle);
+          const isFront = cos >= 0;
+
+          // Vẽ nền không gian
+          ctx.fillStyle = '#08080a';
+          ctx.fillRect(0, 0, W, H);
+
+          const bgGrad = ctx.createRadialGradient(cx, cy - 80, 20, cx, cy - 80, 480);
+          bgGrad.addColorStop(0, 'rgba(255, 120, 0, 0.45)');
+          bgGrad.addColorStop(0.5, 'rgba(245, 208, 0, 0.12)');
+          bgGrad.addColorStop(1, 'rgba(8, 8, 10, 0)');
+          ctx.fillStyle = bgGrad;
+          ctx.fillRect(0, 0, W, H);
+
+          // Bóng đổ động dưới chân thẻ
+          ctx.save();
+          const shadowWidth = Math.max(20, Math.abs(cos) * cardW * 0.95);
+          ctx.beginPath();
+          ctx.ellipse(cx, cy + (cardH / 2) + 70, shadowWidth / 2, 18, 0, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(0, 0, 0, 0.6)';
+          ctx.filter = 'blur(10px)';
+          ctx.fill();
+          ctx.restore();
+
+          // Vẽ thẻ xoay 3D
+          ctx.save();
+          ctx.translate(cx, cy);
+
+          const tilt = Math.sin(angle) * 0.035;
+          ctx.transform(cos, tilt, 0, 1, 0, 0);
+
+          if (isFront) {
+            ctx.drawImage(imgFront, -cardW / 2, -cardH / 2, cardW, cardH);
+            
+            const glareGrad = ctx.createLinearGradient(-cardW / 2, -cardH / 2, cardW / 2, cardH / 2);
+            glareGrad.addColorStop(0, 'rgba(255, 255, 255, 0)');
+            glareGrad.addColorStop(Math.min(1, Math.max(0, (1 - cos))), 'rgba(255, 255, 255, 0.25)');
+            glareGrad.addColorStop(1, 'rgba(255, 255, 255, 0)');
+            ctx.fillStyle = glareGrad;
+            ctx.fillRect(-cardW / 2, -cardH / 2, cardW, cardH);
+          } else {
+            ctx.drawImage(imgBack, -cardW / 2, -cardH / 2, cardW, cardH);
+
+            const glareGrad = ctx.createLinearGradient(-cardW / 2, -cardH / 2, cardW / 2, cardH / 2);
+            glareGrad.addColorStop(0, 'rgba(255, 255, 255, 0)');
+            glareGrad.addColorStop(Math.min(1, Math.max(0, (1 + cos))), 'rgba(255, 255, 255, 0.3)');
+            glareGrad.addColorStop(1, 'rgba(255, 255, 255, 0)');
+            ctx.fillStyle = glareGrad;
+            ctx.fillRect(-cardW / 2, -cardH / 2, cardW, cardH);
+          }
+
+          ctx.restore();
+
+          requestAnimationFrame(renderFrame);
+        }
+
+        requestAnimationFrame(renderFrame);
+
+      } catch (err) {
+        console.error(err);
+        if (audioSourceNode) {
+          try { audioSourceNode.stop(); } catch(e){}
+        }
+        if (audioCtx && audioCtx.state !== 'closed') audioCtx.close();
+        alert('Vui lòng mở trang web bằng Safari (trên iPhone) hoặc Chrome (trên Android) ngoài để xuất video nhé!');
+        btn.disabled = false;
+        btn.innerText = 'XUẤT VIDEO XOAY 3D (10S CÓ NHẠC)';
+      }
+    }
+
+    updatePreview();
+  </script>
+</body>
+</html>
